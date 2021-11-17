@@ -161,8 +161,8 @@ io.on("connection", (socket) => {
 /**
  * 3000番でサーバを起動する
  */
-http.listen(3000, () => {
-  console.log("listening on *:3000");
+http.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
 });
 
 // トークンを作成する

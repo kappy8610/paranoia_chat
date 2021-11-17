@@ -3,6 +3,7 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 const crypto = require("crypto");
 const { emit } = require("process");
+const PORT = process.env.PORT || 5000
 
 // HTMLやJSなどを配置するディレクトリ
 const DOCUMENT_ROOT = __dirname + "/public";

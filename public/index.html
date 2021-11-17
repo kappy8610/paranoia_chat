@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>パラノイアチャット</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>パラノイアチャット</h1>
+
+  <!-- ログアウト -->
+  <form id="form-quit">
+    <button id="quit-button">退室</button>
+  </form>
+</header>
+
+<!-- 初期設定 -->
+<div id="init">
+
+  <!-- ユーザー名入力 -->
+  <div id="input-name" class="init-div">
+    <p>あなたの名前を入力して下さい</p>
+      <input type="text" id="txt-name">
+  </div>
+
+  <!-- ルーム一覧 -->
+  <div class="rooms-index init-div">
+    <div id="room-head">
+      <h2>ルーム一覧</h2>
+      <!-- ルーム追加 -->
+      <form id="form-room">
+        <button id="add-room-button" onClick="add_room()">追加</button>
+      </form>
+    </div>
+    <table id="rooms-index">
+      <tr>
+        <th>ルーム名</th>
+        <th>パスワード</th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- メイン画面 -->
+<div id="main">
+  <!-- 部屋名 -->
+  <h2 id="room-name"></h2>
+
+  <!-- メンバー一覧 -->
+  <h2>メンバー</h2>
+  <ul id="member-index">
+  </ul>
+
+  <!-- 設定 -->
+  <h2>設定</h2>
+  <button id="role-change" onclick="change_role('GM')">GM化</button>
+
+  <!-- メンバー -->
+  <div class="member-chats">
+    <!-- 全体チャット -->
+    <div id="main-tab">
+      <h3>メインタブ</h3>
+      <div class="chat-tab">
+        <ul id="main-chat">
+        </ul>
+        <form id="main-chat-post" class="form-chat">
+          <input type="text" class="chat-text">
+          <button onclick="submit_chat('main')">送信</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 秘匿チャット -->
+    <div id="hiding-tab">
+      <h3>秘匿タブ</h3>
+      <div class="chat-tab">
+        <ul id="hiding-chat">
+        </ul>
+        <form id="hiding-chat-post" class="form-chat">
+          <input type="text" class="chat-text">
+          <button onclick="submit_chat('hiding')">送信</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

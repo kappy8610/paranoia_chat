@@ -1,0 +1,105 @@
+header {
+  margin: 0;
+  background-color: #2f9976;
+  height: 4em;
+}
+
+header > h1 {
+  color: white;
+  margin: auto 1em;
+  height: 2em;
+  padding-top: 10px;
+}
+
+#form-quit {
+  float: right;
+  position: relative;
+  top: -80%;
+  margin-right: 20px;
+}
+
+#form-quit button {
+  display: none;
+  color: white;
+  background: none;
+  border: none;
+}
+
+#form-quit button:hover{
+  opacity: 0.7;
+}
+
+body {
+  margin: 0;
+}
+
+.init-div {
+  width: 600px;
+  margin: 1em auto;
+  padding: 1em;
+  background: #EEE;
+  border-radius: 1em;
+  box-shadow: 2px 2px 2px;
+}
+
+button {
+  width: 4em;
+  background-color: #2f9976;
+  color: white;
+  border: none;
+  border-radius: 1px;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+#init h2 {
+  font-size: 20px;
+  margin: 0 auto 1em auto;
+}
+
+#room-head {
+  display: inline-flex;
+}
+
+#room-head #form-room {
+  margin: 2px 0 0 1em;
+}
+
+#main {
+  display: none;
+}
+
+.member-chats {
+  display: flex;
+}
+
+.member-chats > div {
+  width: 100%;
+}
+
+.member-chats .chat-tab {
+  height: 400px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.member-chats .form-chat {
+  position: absolute;
+  bottom: 0;
+  display: inline-flex;
+  width: 100%;
+}
+
+.member-chats .chat-text{
+  width: 100%;
+}
+
+.member-chats ul{
+  padding-left: 1em;
+}
+
+.member-chats li{
+  list-style: none;
+}

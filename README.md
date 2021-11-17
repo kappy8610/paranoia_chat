@@ -4,6 +4,9 @@
 - パラノイアTRPGで遊ぶためのチャットツール
 - PLとGMの秘匿チャットができる
 
+## デプロイ先
+- http://paranoia-chat.herokuapp.com/
+
 ## 開発
 ```bash
 $ sudo apt install npm
